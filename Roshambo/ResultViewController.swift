@@ -25,8 +25,8 @@ class ResultViewController: UIViewController {
     
     //Determines winner changes 
     //1 is Rock
-    //2 is Scissors
-    //3 is Paper
+    //2 is Paper
+    //3 is Scissors
     func winnerResults(){
         switch (playerChoice, opponentChoice) {
         case (1,2):
