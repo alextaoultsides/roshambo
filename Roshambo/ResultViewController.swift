@@ -30,21 +30,30 @@ class ResultViewController: UIViewController {
     func winnerResults(){
         switch (playerChoice, opponentChoice) {
         case (1,2):
-            resultLabel.text = "You Lose";
+            resultLabel.text = "Paper covers Rock, You Lose!";
+            resultImage.image = UIImage(named: "PaperCoversRock.jpg")
         case(1,3):
-            resultLabel.text = "You Win!";
+            resultLabel.text = "Rock breaks Scissors, You Win!";
+            resultImage.image = UIImage(named: "RockCrushesScissors.jpg")
         case(2,1):
-            resultLabel.text = "You Win!";
+            resultLabel.text = "Paper covers Rock, You Win!";
+            resultImage.image = UIImage(named: "PaperCoversRock.jpg")
         case(2,3):
-            resultLabel.text = "You Lose!";
+            resultLabel.text = "Scissors cut Paper, You Lose!";
+            resultImage.image = UIImage(named: "ScissorsCutPaper.jpg")
         case(3,1):
-            resultLabel.text = "You Lose!";
+            resultLabel.text = "Rock breaks Scissors, You Lose!";
+            resultImage.image = UIImage(named: "RockCrushesScissors.jpg")
         case(3,2):
-            resultLabel.text = "You Win!";
+            resultLabel.text = "Scissors cut Paper, You Win!";
+            resultImage.image = UIImage(named: "ScissorsCutPaper.jpg")
             
         default:
             resultLabel.text = "A Tie"
+            resultImage.image = UIImage(named: "itsATie.png")
         }
     }
-
+    @IBAction func playAgain(){
+        self.dismiss(animated: true, completion: nil)
+    }
 }

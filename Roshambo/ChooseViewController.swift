@@ -41,7 +41,7 @@ class ChooseViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "result" {
+        if segue.identifier == "paperPick" {
             let controller = segue.destination as! ResultViewController
             controller.playerChoice = 2
             controller.opponentChoice = opponentChoiceRandom()
